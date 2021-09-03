@@ -12,13 +12,14 @@ public class CarMovements : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        carSpeed = 4f;
+        carSpeed = 10f;
         carReverseSpeed = 3f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_groundCheckScript.GetComponent<GroundCheck>().isGrounded);
         if(_groundCheckScript.GetComponent<GroundCheck>().isGrounded == true)
         {
             if (Input.GetKey(KeyCode.D)) // move right, forwards

@@ -9,12 +9,11 @@ public class GroundCheck : MonoBehaviour
         if (collision.CompareTag("Ground"))
         {
             isGrounded = true;
-            Debug.Log("Grounded");
         }
-        else
-        {
-            isGrounded = false;
-            Debug.Log("NOT Grounded");
-        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        isGrounded = false;
     }
 }
